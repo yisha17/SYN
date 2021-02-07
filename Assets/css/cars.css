@@ -2,3 +2,37 @@ nav{
     background-color:lavender;
     align-content: space-between
 }
+#home:hover{
+    background-color: bisque;
+    transition-delay: 100ms;
+    transition-duration: 1s;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: large;
+}
+#book:hover{
+    background-color:lightgrey;
+    transition-delay: 100ms;
+    transition-duration: 1s;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: large;
+}
+#tweet{
+    text-decoration: none;
+}
+#face{
+    text-decoration: none;
+}
+#insta{
+    text-decoration: none;
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background:#6cf;
+ }
