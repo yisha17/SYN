@@ -1,14 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book your Car!</title>
-    <form action="">
-        <!--Here the main Element will be a form that will require one to enter the data accordingly-->
-    </form>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+	<!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+
+	<link type="text/css" rel="stylesheet" href="assets/css/booking.css" />
+
+	
+
 </head>
+
 <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+            <div class="container-fluid bg-dark" id="top">
+        
+              <a class="navbar-brand text-white" href="#"><span class="title">SYN</span>  Car Rental</a>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        
+              <span class="navbar-toggler-icon"></span>
+        
+            </button>
+        
+          
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+              <ul class="navbar-nav ml-auto">
+        
+                <li class="nav-item active">
+        
+                  <a class="nav-link text-white" href="#">Home </a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="#">Cars</a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="#">Booking</a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="#">About</a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="#"><i class="fas fa-user-circle"></i></a>
+        
+                </li>
+        
+              </ul>
+        
+              
+        
+            </div>
+        
+            </div>
+        
+          </nav>
+    </div>
+
     
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Make your reservation</h1>
+						</div>
+						<form>
+							<div class="form-group">
+								<input class="form-control" type="text" placeholder="Enter your name">
+								<span class="form-label">Destination</span>
+							</div>
+                            <div class="form-group">
+								<input class="form-control" type="text" placeholder="Country, ZIP, city...">
+								<span class="form-label">Destination</span>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date" required>
+										<span class="form-label">Check In</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date" required>
+										<span class="form-label">Check out</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<select class="form-control" required>
+											<option value="" selected hidden>no of rooms</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+										<span class="select-arrow"></span>
+										<span class="form-label">Rooms</span>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<select class="form-control" required>
+											<option value="" selected hidden>no of adults</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+										<span class="select-arrow"></span>
+										<span class="form-label">Adults</span>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<select class="form-control" required>
+											<option value="" selected hidden>no of children</option>
+											<option>0</option>
+											<option>1</option>
+											<option>2</option>
+										</select>
+										<span class="select-arrow"></span>
+										<span class="form-label">Children</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="email" placeholder="Enter your Email">
+										<span class="form-label">Email</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="tel" placeholder="Enter you Phone">
+										<span class="form-label">Phone</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

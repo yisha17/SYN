@@ -1,0 +1,22 @@
+.container{
+    margin-top: 120px;
+}
+
+.image-preview{
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    color: rgb(99, 99, 102);
+
+}
+
+.img-preview{
+    display: none;
+    width: 100%;
+}
+

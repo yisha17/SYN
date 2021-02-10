@@ -147,6 +147,7 @@
 
 .section-1 {
     padding: 20vmin 0vmin;
+    background-color: #a19d97;
 }
   
 .section-1 .row .col-md-6 .pray img {
@@ -223,7 +224,7 @@
   .numbers .rect {
     position: relative;
     z-index: 1;
-    background: white;
+    background: rgb(255, 255, 255);
     width: 17rem;
     height: 12rem;
     padding-top: 3.5vmin;
@@ -234,11 +235,12 @@
   
   .numbers {
     margin-top: -15vmin;
+    background-color: #858381;
   }
   
   .numbers .rect h1 {
     font-size: 5rem;
-    color: tomato;
+    color: rgb(190, 71, 50);
   }
   
   .numbers .rect > p {

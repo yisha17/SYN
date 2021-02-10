@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+<title>Admin</title>
+</head>
+<body>
+   <div class="container">
+     <div class="card car-add">
+       <form class="add car">
+          <div class="card-body text-center">
+            <h4>ADD CAR</h4>
+          </div>
+
+          <div class="form-label-group">
+            <input class="car-image" type="file" id ="myfile"name="myImage"  style="display: none;" />
+            <input type="button" id= "filebtn">
+            <div class="image-preview" id="image-preview">
+              <img src="" alt="image preview" class="img-preview">  
+              <span class="image-text">Choose Image</span>
+
+            </div>
+          </div>
+          
+          <div class="form-label-group">
+            <input type="text" name="car-name" xtd="input" class="form-control" value="" required="required" id="car-name">
+            <label for="car-name">Enter car Name</label>
+          </div>
+
+
+          <div class="form-label-group">
+            <input type="text" name="car-name" xtd="input" class="form-control" value="" required="required" id="car-type">
+            <label for="car-name">car Type</label>
+          </div>
+
+        
+          <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit">ADD CAR</button>        
+            
+          
+        </div>
+
+
+
+       </form>
+     </div>
+   </div>
+
+    
+<script src="assets/js/admin.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
