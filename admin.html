@@ -13,35 +13,86 @@
 <body>
    <div class="container">
      <div class="card car-add">
-       <form class="add car">
+      <form class="add car">
           <div class="card-body text-center">
-            <h4>ADD CAR</h4>
+            <h2>ADD CAR</h2>
           </div>
-
-          <div class="form-label-group">
-            <input class="car-image" type="file" id ="myfile"name="myImage"  style="display: none;" />
-            <input type="button" id= "filebtn">
-            <div class="image-preview" id="image-preview">
-              <img src="" alt="image preview" class="img-preview">  
-              <span class="image-text">Choose Image</span>
-
+          <!--first row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="image-preview" id="image-preview">
+                <img src="" alt="image preview" class="img-preview">  
+                <span class="image-text">Choose Image</span>
+              </div>
+              <input class="car-image" type="file" id ="myfile"name="myImage"  style="display: none;" />
+              <input type="button" id= "filebtn" value="Choose Car">
+              
             </div>
           </div>
+        <!--second row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input class="form-control car-name" type="text"  placeholder="Enter Car Name">
+                <span class="form-label">Car Name</span>
+              </div>
+            </div>
+          </div>
+          <!--third row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <select class="form-control car-type" required>
+                  <option value="" selected hidden>Car Type</option>
+                  <option>SUV</option>
+                  <option>VAN</option>
+                  <option>PICKUP TRUCK</option>
+                  <option>MINIVAN</option>
+                  <option>SEDAN</option>
+                  <option>COUPE</option>
+                  <option>Mini Truck</option>
+                  <option>Truck</option>
+                  <option>Limousine</option>
+    
+                  
+                </select>
+                <span class="select-arrow"></span>
+                <span class="form-label">Car Type</span>
+              </div>
+            </div>
+          </div>
+
+          <!--Fourth row-->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input class="form-control plate-number" type="text" placeholder="Enter Plate Number">
+                <span class="form-label">Plate number</span>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input class="form-control car-price" type="text" placeholder="Enter price">
+                <span class="form-label">Price Per Day</span>
+              </div>
+            </div>
+          </div>
+          <!--Button row-->
           
-          <div class="form-label-group">
-            <input type="text" name="car-name" xtd="input" class="form-control" value="" required="required" id="car-name">
-            <label for="car-name">Enter car Name</label>
+         <div class="row">
+          <div class="col-lg-12">
+            <button class="btn btn-lg btn-facebook  text-uppercase btn-adder" type="submit">ADD CAR</button>
           </div>
+         </div> 
 
-
-          <div class="form-label-group">
-            <input type="text" name="car-name" xtd="input" class="form-control" value="" required="required" id="car-type">
-            <label for="car-name">car Type</label>
+         <div class="row">
+          <div class="col-lg-6 align-center">
+            <a href="index.html" class="btn btn-warning">Go To Home Page</a>
           </div>
-
-        
-          <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit">ADD CAR</button>        
-            
+          <div class="col-lg-6">
+            <a href="manage.html" class="btn btn-success">Go to Manging page</a>
+          </div>
+        </div>
           
         </div>
 
@@ -52,9 +103,11 @@
    </div>
 
     
-<script src="assets/js/admin.js"></script>
+<script src="assets/js/admin.js" type="module"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js" ></script>
+
 </body>
 </html>

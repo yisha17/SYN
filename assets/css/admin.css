@@ -1,7 +1,48 @@
 .container{
     margin-top: 120px;
 }
+.card{
+    border-radius: 10px;
+    border:1px solid goldenrod;
+}
+.form-control::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+.card-body{
+    border-radius: 10px;
+    background: rgb(29, 23, 16);
+}
 
+.card-body h2{
+    color: aliceblue;
+}
+
+.btn-adder{
+    border-radius: 5px;
+    border: 2px solid ;
+    background: #000;
+    color: white;
+}
+
+.form-group .form-label {
+	position: absolute;
+	top: -10px;
+	left: 25px;
+	opacity: 0;
+	color: #ff8846;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	height: 15px;
+	line-height: 15px;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.row{
+    margin: 4px 0;
+}
 .image-preview{
     width: auto;
     height: auto;
@@ -9,10 +50,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
     color: rgb(99, 99, 102);
+    margin-top: 20px;
+    border-radius: 10px;
 
+}
+
+#filebtn{
+    color: black;
+    align-self: flex-end;
+    align-content: flex-end;
+}
+select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .img-preview{
