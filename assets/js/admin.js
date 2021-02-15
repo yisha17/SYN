@@ -1,7 +1,8 @@
 'use strict';
 import CarRentalDB,{
     bulkcreate,
-    getData
+    getData,
+    Sortobj
 } from './module.js'
 
 let db = CarRentalDB("CarRentalDB",{
@@ -40,6 +41,7 @@ addCar.onclick =(event) =>{
         plate_number:plateNumber.value,
         is_rented:false
     })
+    console.log("created")
     console.log(flag);
     carName.value = chooseFile.value= carType.value = carPrice.value = plateNumber.value = "";
     getData(db.car_table,(data)=>{

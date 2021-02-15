@@ -43,7 +43,7 @@ const empty = object => {
 const getData = (dbtable,fn) =>{
     let index = 0;
     let obj = {};
-    dbtable.count((count)=>{
+    dbtable.count(count=>{
         if(count){
             dbtable.each(table =>{
                 obj = Sortobj(table)
@@ -67,6 +67,7 @@ const Sortobj = sortobj =>{
         plate_number:sortobj.plate_number,
         is_rented:sortobj.is_rented
     }
+    console.log(obj)
     return obj;
 }
 
@@ -74,5 +75,6 @@ const Sortobj = sortobj =>{
 export default CarRentalDB; 
 export{
     bulkcreate,
-    getData
+    getData,
+    Sortobj
 }
