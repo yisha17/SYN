@@ -44,11 +44,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             outpost += `
             <div class="col-sm-3">
             <div class="card card-block">
-              <img class="card-img-top" data-src="${car.car_image}" alt="100%x180" src="./assets/img/car2.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-              <div class="card-block">
+              <img class="card-img-top" data-src="" alt="100%x180" src="${car.car_image}" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+              <div class="card-block align-center">
                 <h4 class="card-title">${car.car_name}</h4>
+                <p class = "card-text">${car.price}birr/day</p>
             
-                <a href="booking.html?id=${car.id}" class="btn btn-primary book">BOOK</a>
+                <a href="booking.html?id=${car.id}" class="btn btn-primary book align-center">BOOK</a>
               </div>
               
           </div>
@@ -77,11 +78,12 @@ function getType(e){
             outpost += `
             <div class="col-sm-3">
             <div class="card card-block">
-              <img class="card-img-top" data-src="${car.car_image}" alt="100%x180" src="./assets/img/car2.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-              <div class="card-block">
+              <img class="card-img-top" data-src="" alt="100%x180" src="${car.car_image}" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+              <div class="card-block align-center">
                 <h4 class="card-title">${car.car_name}</h4>
+                <p class = "card-text">${car.price}birr/day</p>
                 
-                <a href="booking.html?id=${car.id}" class="btn btn-primary book">BOOK</a>
+                <a href="booking.html?id=${car.id}" class="btn btn-warning book">BOOK</a>
               </div>
               
           </div>

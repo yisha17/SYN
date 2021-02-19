@@ -9,9 +9,6 @@ let db = CarRentalDB("CarRentalDB",{
     car_table:`++id,car_name,car_image,car_type,price,plate_number,is_rented`
 });
 
-
-
-
 //choosing photo
 const browse = document.getElementById('filebtn');
 const chooseFile = document.getElementById('myfile');
@@ -25,9 +22,6 @@ const carType = document.querySelector('.car-type');
 const plateNumber = document.querySelector('.plate-number');
 const carPrice = document.querySelector('.car-price');
 const addCar = document.querySelector('.btn-adder');
-
-
-
 
 
 addCar.onclick =(event) =>{
@@ -48,14 +42,6 @@ addCar.onclick =(event) =>{
         console.log(data);
     });
 }
-
-
-
-
-
-
-
-
 
 browse.addEventListener('click',choosePhoto);
 
@@ -81,6 +67,33 @@ chooseFile.addEventListener('change',function(){
          reader.readAsDataURL(file);
     }
 
+});
+
+document.addEventListener('DOMContentLoaded',()=>{
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = Number(urlParams.get('id'));
+    if (id){
+        addCar.textContent = "Update Car"
+        db.car_table.get(id)
+        .then(data => {
+            carName.value = data.car_name;
+            carPrice.value = data.price;
+            carType.value = data.car_type;
+            plateNumber.value = data.plate_number;
+            carImage.src = data.car_image;
+            const reader = new FileReader();
+            carImage = reader.readAsDataURL(data.car_image)
+        });
+
+        addCar.onclick =(e) =>{
+            db.car_table.update(id,{car_name:carName.value,plate_number:plateNumber.value,price:carPrice.value,car_type:carType.value})
+            .then(function(updated){
+                console.log("updated");
+            });
+
+        }
+        
+    }
 });
 
 //Database process

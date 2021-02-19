@@ -54,7 +54,7 @@ bookNow.onclick =() =>{
         car: window.data
     })
 
-    db.user_table.update()
+    // db.user_table.update()
     db.car_table.update({id:id},{is_rented:true})
     .then(function(updated){
         console.log("updated");

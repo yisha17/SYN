@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded',()=>{
               <li class="list-group-item">${car.price}birr/day</li>
               <li class="list-group-item">${car.is_rented}</li>
             </ul>
-            <a href=""><i class="fa fa-edit"></i></a>
+            <a href="admin.html?id=${car.id}"><i class="fa fa-edit"></i></a>
             <a href=""><i class="fa fa-trash"></i></a><br>
           </div>
         </div>
@@ -57,7 +57,9 @@ document.addEventListener('DOMContentLoaded',()=>{
       <td>${user.password}</td>
       <td>${user.pickup_date}</td>
       <td>${user.dropup_date}</td>
-      <td>${user.car}</td>
+      <td>${user.car.id}</td>
+      <td>${(user.dropup_date - user.pickup_date) * user.car.price}</td>
+      <td><a class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
     </tr>
       `;
 
