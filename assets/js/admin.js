@@ -35,7 +35,7 @@ addCar.onclick =(event) =>{
    
     let flag = bulkcreate(db.car_table,{
         car_name:carName.value,
-        car_image:chooseFile.value,
+        car_image:window.result,
         car_type:carType.value,
         price:carPrice.value,
         plate_number:plateNumber.value,
@@ -73,9 +73,12 @@ chooseFile.addEventListener('change',function(){
 
         reader.addEventListener('load',function(){
             carImage.setAttribute('src',this.result);
+            window.result = this.result
+            console.log(window.result);
         });
 
-        reader.readAsDataURL(file);
+        //console.log(reader.readAsBinaryString(file));
+         reader.readAsDataURL(file);
     }
 
 });

@@ -4,9 +4,11 @@ import CarRentalDB,{
     Sortobj
 } from './module.js'
 const carRow = document.querySelector('.car-row');
-
+const clientRow = document.querySelector('customer-container');
+const tbody = document.getElementById('tbody');
 let db = CarRentalDB('CarRentalDB',{
-    car_table:`++id,car_name,car_image,car_type,price,plate_number,is_rented`
+    car_table:`++id,car_name,car_image,car_type,price,plate_number,is_rented`,
+    user_table:`++id,user_name,email,password,pickup_date,dropup_date,car`
 });
 console.log(db)
 
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     db.car_table.each(car =>{
         console.log(car.car_image);
       outpost += `
-      <div class="col-lg-3">
+      <div class="col-lg-3 mt-5 mb-5">
       <div class="card" style="width: 18rem;">
           <img class="card-img-top" src="${car.car_image}" alt="Card image cap">
           <div class="card-body">
@@ -41,8 +43,28 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     })
-
     
+    
+    
+    let tb = ''
+    db.user_table.each(user => {
+      console.log(user)
+      tb += `
+      <tr>
+      <th scope="row">${user.id}</th>
+      <td>${user.user_name}</td>
+      <td>${user.email}</td>
+      <td>${user.password}</td>
+      <td>${user.pickup_date}</td>
+      <td>${user.dropup_date}</td>
+      <td>${user.car}</td>
+    </tr>
+      `;
+
+      tbody.innerHTML = tb;
+
+     
+    })
 
 });
 

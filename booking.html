@@ -96,89 +96,56 @@
 						</div>
 						<form>
 							<div class="form-group">
-								<input class="form-control" type="text" placeholder="Enter your name">
+								<input class="form-control" id="user_name" type="text" placeholder="Enter your name">
 								<span class="form-label">Destination</span>
 							</div>
                             <div class="form-group">
-								<input class="form-control" type="text" placeholder="Country, ZIP, city...">
+								<input class="form-control" id="car_name" type="text" placeholder="Your car">
 								<span class="form-label">Destination</span>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="date" required>
-										<span class="form-label">Check In</span>
+										<input class="form-control" id="pickup" type="date" required>
+										<span class="form-label">PIck up date</span>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="date" required>
-										<span class="form-label">Check out</span>
+										<input class="form-control" id="dropup" type="date" required>
+										<span class="form-label">drop up date</span>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-4">
-									<div class="form-group">
-										<select class="form-control" required>
-											<option value="" selected hidden>no of rooms</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
-										<span class="select-arrow"></span>
-										<span class="form-label">Rooms</span>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<select class="form-control" required>
-											<option value="" selected hidden>no of adults</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
-										<span class="select-arrow"></span>
-										<span class="form-label">Adults</span>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-group">
-										<select class="form-control" required>
-											<option value="" selected hidden>no of children</option>
-											<option>0</option>
-											<option>1</option>
-											<option>2</option>
-										</select>
-										<span class="select-arrow"></span>
-										<span class="form-label">Children</span>
-									</div>
-								</div>
+							<div class="form-group">
+								<input class="form-control" type="text" id="user_email" placeholder="Enter your Email">
+								<span class="form-label">Destination</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="password" id="password" placeholder="Enter your Password">
+								<span class="form-label">Destination</span>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" type="email" placeholder="Enter your Email">
-										<span class="form-label">Email</span>
+									<div class="form-btn" id="book-now">
+										<button class="submit-btn">Book Now</button>
 									</div>
 								</div>
 								<div class="col-md-6">
-									<div class="form-group">
-										<input class="form-control" type="tel" placeholder="Enter you Phone">
-										<span class="form-label">Phone</span>
+									<div class="form-btn" id="choose-car">
+										<button class="submit-btn">Choose CAR</button>
 									</div>
 								</div>
 							</div>
-							<div class="form-btn">
-								<button class="submit-btn">Book Now</button>
-							</div>
+					
+							
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="./assets/js/booking.js"></script>
+	
 	<script src="js/jquery.min.js"></script>
 	<script>
 		$('.form-control').each(function () {
@@ -201,7 +168,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js" ></script>
+	<script src="./assets/js/booking.js" type="module"></script>
 </body>
 
 </html>
