@@ -59,11 +59,7 @@ bookNow.onclick =() =>{
     .then(function(updated){
         console.log("updated");
     })
-    .then(car => {
-        console.log(car);
-    })
-        
-   
+    
 
     userName.value = userEmail.value = userPassword.value = pickDate.value = dropDate.value = carName.value = "";
 }
