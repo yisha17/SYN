@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+	<!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+
+	<link type="text/css" rel="stylesheet" href="assets/css/booking.css" />
+
+	
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+            <div class="container-fluid bg-dark" id="top">
+        
+              <a class="navbar-brand text-white" href="#"><span class="title">SYN</span>  Car Rental</a>
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        
+              <span class="navbar-toggler-icon"></span>
+        
+            </button>
+        
+          
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+              <ul class="navbar-nav ml-auto">
+        
+                <li class="nav-item active">
+        
+                  <a class="nav-link text-white" href="index.html">Home </a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="cars.html">Cars</a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="booking.html">Booking</a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="#">About</a>
+        
+                </li>
+        
+                <li class="nav-item">
+        
+                  <a class="nav-link text-white" href="account.html"><i class="fas fa-user-circle"></i></a>
+        
+                </li>
+        
+              </ul>
+        
+              
+        
+            </div>
+        
+            </div>
+        
+          </nav>
+    </div>
+
+    
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Book Your Car</h1>
+						</div>
+						<form>
+							<div class="form-group">
+								<input class="form-control" id="user_name" type="text" placeholder="Enter your name">
+								<span class="form-label">Name</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="email" id="user_email" placeholder="Enter your Email">
+								<span class="form-label">Email</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="password" id="password" placeholder="Enter your Password">
+								<span class="form-label">Password</span>
+							</div>
+                            <div class="form-group">
+								<input class="form-control" id="car_name" type="text" placeholder="Your car">
+								<span class="form-label">Destination</span>
+		
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" id="pickup" type="date" required>
+										<span class="form-label">PIck up date</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" id="dropup" type="date" required>
+										<span class="form-label">drop up date</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-btn" id="book-now">
+										<button class="submit-btn">Book Now</button>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-btn" id="choose-car">
+										<a href="cars.html" class="btn submit-btn">Choose CAR</a>
+										
+									</div>
+								</div>
+							</div>
+					
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+	<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+	<script>dayjs().format()</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js" ></script>
+	<script src="./assets/js/booking.js" type="module"></script>
+</body>
+
+</html>
