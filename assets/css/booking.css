@@ -1,5 +1,5 @@
 body{
-    background-color:gold
+    background-color:rgb(65, 56, 11)
 }
 
 
@@ -24,12 +24,12 @@ body{
 
 .booking-form {
 	position: relative;
-	max-width: 642px;
+	max-width: 900px;
 	width: 100%;
-	margin: 50px;
+	margin: 90px;
 	padding: 40px;
 	
-	background-image: url('../img/background.jpg');
+	background-image: url('../img/bk.jpg');
 	background-size: cover;
 	border-radius: 5px;
 	z-index: 20;
