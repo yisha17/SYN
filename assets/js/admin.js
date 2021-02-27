@@ -35,6 +35,7 @@ addCar.onclick =(event) =>{
         plate_number:plateNumber.value,
         is_rented:false
     })
+    console.log(carName.value)
     console.log("created")
     console.log(flag);
     carName.value = chooseFile.value= carType.value = carPrice.value = plateNumber.value = "";
@@ -60,7 +61,7 @@ chooseFile.addEventListener('change',function(){
         reader.addEventListener('load',function(){
             carImage.setAttribute('src',this.result);
             window.result = this.result
-            console.log(window.result);
+            
         });
 
         //console.log(reader.readAsBinaryString(file));

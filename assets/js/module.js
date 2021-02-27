@@ -1,7 +1,7 @@
 
 const CarRentalDB = (dbname,tableName) =>{
     const db = new Dexie(dbname);
-    db.version(2).stores(tableName);
+    db.version(3).stores(tableName);
     db.open();
 
     return db;
@@ -14,8 +14,7 @@ const bulkcreate = (dbtable,data)=>{
     dbtable.bulkAdd([data]);
     let flag = empty(data);
     if(flag){
-        dbtable.bulkAdd([data]);
-        console.log("dat inserted successfully");
+        console.log("data inserted successfully");
     }else{
         console.log("please provide data");
     }

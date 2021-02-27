@@ -44,15 +44,18 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 bookNow.onclick =() =>{
 
-    window.data.is_rented = true;
-    let flag = bulkcreate(db.user_table,{
+        window.data.is_rented = true;
+        let flag = bulkcreate(db.user_table,{
         user_name:userName.value,
         email:userEmail.value,
         pickup_date:pickDate.value,
         dropup_date:dropDate.value,
         password:userPassword.value,
-        car: window.data
-    })
+        car: window.data})
+    
+
+   
+    
 
     // db.user_table.update()
     db.car_table.update({id:id},{is_rented:true})
@@ -62,4 +65,15 @@ bookNow.onclick =() =>{
     
 
     userName.value = userEmail.value = userPassword.value = pickDate.value = dropDate.value = carName.value = "";
+}
+
+
+function checkForm(){
+    if (userName.value ===''|| userEmail.value === ''|| pickDate.value ===''|| userPassword.value ===''|| dropDate.value===''|| carName.value ===''){
+        alert('please complete the form')
+        return false;
+    }else if(userPassword.value.length < 8){
+        userPassword.placeholder = 'your password must be more than 8 characters';
+        return false;
+    }  
 }
