@@ -27,53 +27,76 @@ const id = Number(urlParams.get('id'));
 
 document.addEventListener('DOMContentLoaded',()=>{
   
-
-   db.car_table.get({id:id})
-   .then(data=>
-    {
-    console.log(data.car_name);
-    window.data = data;
-    console.log(window.data)
-    console.log(window.data.is_rented);
-    carName.value = data.car_name
-   });
-    
+if(id){
+    db.car_table.get({id:id})
+    .then(data=>
+     {
+     console.log(data.car_name);
+     window.data = data;
+     console.log(window.data)
+     console.log(window.data.is_rented);
+     carName.value = data.car_name
+    });
+}
+  
     
     // const request = db.car_table.get(id,id})
 });
 
 bookNow.onclick =() =>{
 
-        window.data.is_rented = true;
-        let flag = bulkcreate(db.user_table,{
-        user_name:userName.value,
-        email:userEmail.value,
-        pickup_date:pickDate.value,
-        dropup_date:dropDate.value,
-        password:userPassword.value,
-        car: window.data})
-    
+     validateForm();
+    if(validateForm() === true){
+        
 
-   
-    
 
-    // db.user_table.update()
-    db.car_table.update({id:id},{is_rented:true})
-    .then(function(updated){
-        console.log("updated");
-    })
-    
+            window.data.is_rented = true;
+            let flag = bulkcreate(db.user_table,{
+            user_name:userName.value,
+            email:userEmail.value,
+            pickup_date:pickDate.value,
+            dropup_date:dropDate.value,
+            password:userPassword.value,
+            car: window.data});
+
+        
+            db.car_table.update({id:id},{is_rented:true})
+            .then(function(updated){
+                console.log("updated");
+            })
+
+
+    }
+
 
     userName.value = userEmail.value = userPassword.value = pickDate.value = dropDate.value = carName.value = "";
 }
 
 
-function checkForm(){
+const validateForm = () => {
+    console.log("validating");
+    const userName = document.getElementById('user_name');
+    const carName = document.getElementById('car_name');
+
+    const pickDate = document.getElementById('pickup');
+    const dropDate = document.getElementById('dropup');
+    const userEmail = document.getElementById('user_email');
+    const userPassword = document.getElementById('password');
+
+    const choooseCar = document.getElementById('choose-car');
+    const bookNow = document.getElementById('book-now');
+    var emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (userName.value ===''|| userEmail.value === ''|| pickDate.value ===''|| userPassword.value ===''|| dropDate.value===''|| carName.value ===''){
         alert('please complete the form')
         return false;
-    }else if(userPassword.value.length < 8){
+    }if(userPassword.value.length < 8){
         userPassword.placeholder = 'your password must be more than 8 characters';
         return false;
+    }if(userEmail.value.match(emailReg)){
+        alert("incorrect Email")
+        return false;
+    }
+    else{
+        return true;
     }  
 }

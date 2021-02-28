@@ -26,10 +26,10 @@
 
 .form-group .form-label {
 	position: absolute;
-	top: -10px;
+	top: -0px;
 	left: 25px;
-	opacity: 0;
-	color: #ff8846;
+	opacity:0.5 ;
+	color: #2b221d;
 	font-size: 11px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -71,4 +71,8 @@ select.form-control {
     display: none;
     width: 100%;
 }
+.form-control::placeholder {
+	color: rgba(235, 255, 255, 1);
+}
+
 

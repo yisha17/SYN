@@ -26,22 +26,25 @@ const addCar = document.querySelector('.btn-adder');
 
 addCar.onclick =(event) =>{
     
+    if(validateForm() === true){
+        let flag = bulkcreate(db.car_table,{
+            car_name:carName.value,
+            car_image:window.result,
+            car_type:carType.value,
+            price:carPrice.value,
+            plate_number:plateNumber.value,
+            is_rented:false
+        })
+        console.log(carName.value)
+        console.log("created")
+        console.log(flag);
+        carName.value = chooseFile.value= carType.value = carPrice.value = plateNumber.value = "";
+        getData(db.car_table,(data)=>{
+            console.log(data);
+        });
+    }
    
-    let flag = bulkcreate(db.car_table,{
-        car_name:carName.value,
-        car_image:window.result,
-        car_type:carType.value,
-        price:carPrice.value,
-        plate_number:plateNumber.value,
-        is_rented:false
-    })
-    console.log(carName.value)
-    console.log("created")
-    console.log(flag);
-    carName.value = chooseFile.value= carType.value = carPrice.value = plateNumber.value = "";
-    getData(db.car_table,(data)=>{
-        console.log(data);
-    });
+  
 }
 
 browse.addEventListener('click',choosePhoto);
@@ -49,6 +52,7 @@ browse.addEventListener('click',choosePhoto);
 function choosePhoto(){
     chooseFile.click();
     console.log("successful");
+    console.log(carImage.src);
 }
 chooseFile.addEventListener('change',function(){
     const file = this.files[0];
@@ -93,11 +97,25 @@ document.addEventListener('DOMContentLoaded',()=>{
             });
 
         }
+        console.log(window.result);
         
     }
 });
 
-//Database process
+const validateForm = () =>{
+   if(carName.value === ""||
+   carPrice.value ===""||
+   carType.value ===""||
+   carImage.src === ""||
+   carPrice.value === ""||
+   window.result ===undefined){
+       alert("fill the form completely");
+       return false;
+   }
+   else{
+       return true;
+   } 
+}
 
 
 
