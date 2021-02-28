@@ -85,6 +85,9 @@ const validateForm = () => {
 
     const choooseCar = document.getElementById('choose-car');
     const bookNow = document.getElementById('book-now');
+    var date = dayjs(new Date).toISOString();
+    const dayjs = require('dayjs');
+    var rdate = date.slice(0,10);
     var emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (userName.value ===''|| userEmail.value === ''|| pickDate.value ===''|| userPassword.value ===''|| dropDate.value===''|| carName.value ===''){
         alert('please complete the form')
@@ -95,6 +98,14 @@ const validateForm = () => {
     }if(userEmail.value.match(emailReg)){
         alert("incorrect Email")
         return false;
+    }else if(dayjs(pickDate).isBefore(dayjs(rdate))){
+        alert("incorrect Date")
+        return false;
+    }else if(dayjs(pickDate).isAfter(dayjs(dropDate))){
+
+        alert("incorrect date")
+        return false;
+
     }
     else{
         return true;
