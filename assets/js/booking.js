@@ -85,17 +85,19 @@ const validateForm = () => {
 
     const choooseCar = document.getElementById('choose-car');
     const bookNow = document.getElementById('book-now');
-    var date = dayjs(new Date).toISOString();
+    var datev = new Date();
     const dayjs = require('dayjs');
+    var date = dayjs(datev).toISOString();
+    
     var rdate = date.slice(0,10);
     var emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (userName.value ===''|| userEmail.value === ''|| pickDate.value ===''|| userPassword.value ===''|| dropDate.value===''|| carName.value ===''){
         alert('please complete the form')
         return false;
-    }if(userPassword.value.length < 8){
+    }else if(userPassword.value.length < 8){
         userPassword.placeholder = 'your password must be more than 8 characters';
         return false;
-    }if(userEmail.value.match(emailReg)){
+    }else if(userEmail.value.match(emailReg)){
         alert("incorrect Email")
         return false;
     }else if(dayjs(pickDate).isBefore(dayjs(rdate))){

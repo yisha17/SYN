@@ -1,7 +1,7 @@
 
 const CarRentalDB = (dbname,tableName) =>{
     const db = new Dexie(dbname);
-    db.version(3).stores(tableName);
+    db.version(4).stores(tableName);
     db.open();
 
     return db;

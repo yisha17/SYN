@@ -12,7 +12,7 @@ let db = CarRentalDB('CarRentalDB',{
     car_table:`++id,car_name,car_image,car_type,price,plate_number,is_rented`,
     user_table:`++id,user_name,email,password,pickup_date,dropup_date,car`
 });
-console.log(db)
+
 
 getData(db.car_table,(data)=>{
     // console.log(data);
@@ -70,18 +70,23 @@ document.addEventListener('DOMContentLoaded',()=>{
 
      
     })
-    customerRemove.addEventListener('click',()=>{
-      let id = document.getElementById("id");
-      console.log(id.nodeValue)
-      // db.user_table.delete(id);
+
+
+    db.user_table.where(dayjs(db.dropup_date).isBefore(dayjs(new Date))).delete();
     
-    });
 
    
 
     // db.user_table.where(dropup_date.getTime).below()
 
 });
+
+customerRemove.addEventListener('click',()=>{
+      let id = document.getElementById("id");
+      console.log(id.nodeValue)
+      // db.user_table.delete(id);
+    
+    });
 
 
 

@@ -86,16 +86,19 @@ document.addEventListener('DOMContentLoaded',()=>{
             carType.value = data.car_type;
             plateNumber.value = data.plate_number;
             carImage.src = data.car_image;
-            const reader = new FileReader();
-            carImage = reader.readAsDataURL(data.car_image)
         });
 
         addCar.onclick =(e) =>{
-            db.car_table.update(id,{car_name:carName.value,plate_number:plateNumber.value,price:carPrice.value,car_type:carType.value})
-            .then(function(updated){
+            if(addCar.textContent === "Update Car"){
+                console.log("clicked");
+                console.log(id);
+                db.car_table.update({id:id},{car_name:carName.value,plate_number:plateNumber.value,price:carPrice.value,car_type:carType.value})
+                .then(function(put){
                 console.log("updated");
             });
 
+            }
+            
         }
         console.log(window.result);
         
