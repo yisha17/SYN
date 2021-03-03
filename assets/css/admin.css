@@ -72,3 +72,7 @@ select.form-control {
     width: 100%;
 }
 
+footer{
+	position: absolute;
+	top:100vh;
+}
