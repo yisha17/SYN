@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Booking Form HTML Template</title>
+	<title>Booking Form</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
@@ -46,19 +46,19 @@
         
                 <li class="nav-item active">
         
-                  <a class="nav-link text-white" href="#">Home </a>
+                  <a class="nav-link text-white" href="index.html">Home </a>
         
                 </li>
         
                 <li class="nav-item">
         
-                  <a class="nav-link text-white" href="#">Cars</a>
+                  <a class="nav-link text-white" href="cars.html">Cars</a>
         
                 </li>
         
                 <li class="nav-item">
         
-                  <a class="nav-link text-white" href="#">Booking</a>
+                  <a class="nav-link text-white" href="booking.html">Booking</a>
         
                 </li>
         
@@ -70,7 +70,7 @@
         
                 <li class="nav-item">
         
-                  <a class="nav-link text-white" href="#"><i class="fas fa-user-circle"></i></a>
+                  <a class="nav-link text-white" href="account.html"><i class="fas fa-user-circle"></i></a>
         
                 </li>
         
@@ -92,16 +92,25 @@
 				<div class="row">
 					<div class="booking-form">
 						<div class="form-header">
-							<h1>Make your reservation</h1>
+							<h1>Book Your Car</h1>
 						</div>
 						<form>
 							<div class="form-group">
 								<input class="form-control" id="user_name" type="text" placeholder="Enter your name">
-								<span class="form-label">Destination</span>
+								<span class="form-label">Name</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="email" id="user_email" placeholder="Enter your Email">
+								<span class="form-label">Email</span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="password" id="password" placeholder="Enter your Password">
+								<span class="form-label">Password</span>
 							</div>
                             <div class="form-group">
 								<input class="form-control" id="car_name" type="text" placeholder="Your car">
 								<span class="form-label">Destination</span>
+		
 							</div>
 							<div class="row">
 								<div class="col-md-6">
@@ -117,14 +126,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<input class="form-control" type="text" id="user_email" placeholder="Enter your Email">
-								<span class="form-label">Destination</span>
-							</div>
-							<div class="form-group">
-								<input class="form-control" type="password" id="password" placeholder="Enter your Password">
-								<span class="form-label">Destination</span>
-							</div>
+							
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-btn" id="book-now">
@@ -145,50 +147,11 @@
 				</div>
 			</div>
 		</div>
-	
-	<footer>
-        <div class="container-fluid p-0">
-          <div class="row text-left">
-            <div class="col-md-5 col-sm-5">
-              <h4 class="text-light">About us</h4>
-              <p class="text-muted">we are welcome to giveyou comfortable car with cheap expense, we are here for your comfort, please contact us</p>
-              <p class="pt-4 text-muted">Copyright ©2019 All rights reserved | This template is made with by
-                <span> Daily Tuition</span>
-              </p>
-            </div>
-            <div class="col-md-5 col-sm-12">
-              <h4 class="text-light">Newsletter</h4>
-              <p class="text-muted">Stay Updated</p>
-              <form class="form-inline">
-                <div class="col pl-0">
-                  <div class="input-group pr-5">
-                    <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="fas fa-arrow-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="col-md-2 col-sm-12">
-              <h4 class="text-light">Follow Us</h4>
-              <p class="text-muted">Let us be social</p>
-              <div class="column text-light">
-                <i class="fab fa-facebook-f">@SYN CarRental campany</i>
-                <i class="fab fa-instagram">@SYN_car_rental</i>
-                <i class="fab fa-twitter">SynCarrent</i>
-                <i class="fab fa-youtube">SyNCarRent</i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
 	</div>
 
 	
-	<script src="js/jquery.min.js"></script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>
 		$('.form-control').each(function () {
 			floatedLabel($(this));
@@ -210,6 +173,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+	<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+	<script>dayjs().format()</script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js" ></script>
 	<script src="./assets/js/booking.js" type="module"></script>
 </body>
