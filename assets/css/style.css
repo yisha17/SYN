@@ -1,1 +1,354 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Stalinist+One|Poppins|Russo+One|Noto+Serif|El+Messiri|Carter+One|Oswald|Vidaloka&display=swap');
 
+.carousel-item{
+
+    height: 100vh;
+
+    min-height: 300px;
+
+    background: no-repeat center center scroll;
+
+    background-size: cover;
+
+}
+
+.carousel-item .carousel-caption{
+
+    bottom: 230px;
+
+}
+
+.carousel-caption h5{
+
+    font-size: 45px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-top: 25px;
+
+    font-family: merienda;
+
+}
+
+.carousel-caption p{
+
+    width: 60%;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    font-family: poppins;
+
+}
+
+.carousel-caption a{
+
+    text-transform: uppercase;
+
+    background: #262626;
+
+    padding: 10px 30px;
+
+    display: inline-block;
+
+    color: #fff;
+
+    margin-top: 15px;
+
+}
+.navbar{
+  margin: 0;
+  padding: 0% 0%;
+}
+
+.navbar-nav a{
+
+    font-family: consolas;
+
+    font-size: 18px;
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+}
+.navbar-nav a:hover{
+  transform: scale(1.2);
+}
+
+.navbar-light .navbar-brand{
+
+    color: #fff;
+
+    font-size: 20px;
+
+    
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+.navbar-brand  .title{
+  font-size: 40px;
+  font-family:Stalinist One ;
+}
+
+.navbar-light .navbar-nav .nav-link{
+
+    color: #fff;
+
+}
+
+.navbar-nav{
+
+    text-align: center;
+
+}
+
+.nav-link{
+
+    padding: .2rem 1rem;
+
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+
+    color: #fff !important;
+
+}
+
+.w-100{
+
+    height: 100vh;
+
+}
+
+@media only screen and (max-width:767px){
+
+    .navbar-nav.ml-auto{
+
+        background: rgba(0,0,0,0.5);
+
+    }
+
+    .naabar-toggler{
+
+        padding: 1px 5px;
+
+        font-size: 18px;
+
+        line-height: 0.3;
+
+        background: #fff;
+
+    }
+
+}
+
+.section-1 {
+    padding: 20vmin 0vmin;
+    background-color: #a19d97;
+}
+  
+.section-1 .row .col-md-6 .pray img {
+    opacity: 0.8;
+    width: 80%;
+    border-radius: 0.2em;
+}
+
+.section-1 .row .col-md-6:last-child {
+    position: relative;
+  }
+  
+  .section-1 .row .col-md-6 .panel {
+    position: absolute;
+    top: 7vmin;
+    left: -18vmin;
+    background: white;
+    border-radius: 3px;
+    text-align: left;
+    padding: 13vmin 5vmin 20vmin 10vmin;
+    box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+    font-family: var(--Rubik);
+    z-index: 1;
+  }
+  
+  .section-1 .row .col-md-6 .panel h1 {
+    font-weight: bold;
+    padding: 0.4em 0;
+    font-size: 2em;
+  }
+  
+  .section-1 .row .col-md-6 .panel p {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .cover {
+    width: 100%;
+    height: 55vmin;
+    background: url("../img/front-left-side-47.png");
+    background-position: -24rem -19rem;
+    background-size: 150%;
+    position: relative;
+  }
+  
+  .cover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  
+  .cover .content {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 19vmin;
+  }
+  
+  .cover .content > h1 {
+    font-family: var(--Patua);
+    font-size: 6vmin;
+    color: whitesmoke;
+  }
+  
+  .cover .content > p {
+    font-family: var(--Rubik);
+    font-size: 2vmin;
+    color: #e5e5e5;
+  }
+  
+  .numbers .rect {
+    position: relative;
+    z-index: 1;
+    background: rgb(255, 255, 255);
+    width: 17rem;
+    height: 12rem;
+    padding-top: 3.5vmin;
+    margin: 1rem;
+    border-radius: 0.5em;
+    box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
+  }
+  
+  .numbers {
+    margin-top: -15vmin;
+    background-color: #858381;
+  }
+  
+  .numbers .rect h1 {
+    font-size: 5rem;
+    color: rgb(190, 71, 50);
+  }
+  
+  .numbers .rect > p {
+    font-family: var(--Patua);
+  }
+  
+  .purchase > h1 {
+    padding-top: 15vmin;
+    padding-bottom: 0.1em;
+    font-family: var(--Lobster);
+  }
+  
+  .purchase > p {
+    color: var(--light-black);
+    font-size: 3vmin;
+    padding-bottom: 10vmin;
+  }
+  
+  .purchase .cards .card {
+    width: 22rem;
+    margin: 3vmin 3vmin;
+  }
+  
+  .cards div {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cards .title {
+    background: rgba(208, 241, 241, 0.199);
+    padding: 1.4em 2.5em;
+    font-size: 2vmin;
+  }
+  
+  .card .card-text {
+    padding: 2.5rem 3rem;
+    color: var(--light-black);
+  }
+  
+  .card-body .pricing {
+    background: rgba(208, 241, 241, 0.199);
+    border-top-right-radius: 170px;
+    border-top-left-radius: 170px;
+  }
+  
+  .card-body .pricing > h1 {
+    font-size: 10vmin;
+    padding: 1em 0.5em;
+  }
+  .context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+  .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
+#footer-logo{
+  font-size: 40px;
+  font-family:Stalinist One ;
+}
