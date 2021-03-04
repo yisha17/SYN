@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(65, 56, 11)
+    background-color:rgb(172, 106, 30)
 }
 
 
@@ -24,12 +24,16 @@ body{
 
 .booking-form {
 	position: relative;
-	max-width: 900px;
+
+	top: 55px;
+	left: 150px;
+	max-width: 642px;
 	width: 100%;
 	margin: 90px;
 	padding: 40px;
 	
-	background-image: url('../img/bk.jpg');
+	background-image: url('../img/front-left-side-47.png');
+
 	background-size: cover;
 	border-radius: 5px;
 	z-index: 20;
@@ -191,6 +195,10 @@ body{
 }
 
 footer{
-	position: absolute;
-	top:100vh;
+
+	position: relative;
+	top: 110vh;
+
 }
+
+

@@ -61,6 +61,10 @@
     margin-top: 15px;
 
 }
+.navbar{
+  margin: 0;
+  padding: 0% 0%;
+}
 
 .navbar-nav a{
 
@@ -72,6 +76,9 @@
 
     font-weight: bold;
 
+}
+.navbar-nav a:hover{
+  transform: scale(1.2);
 }
 
 .navbar-light .navbar-brand{
@@ -187,7 +194,7 @@
   .cover {
     width: 100%;
     height: 55vmin;
-    background: url("../assets/pexels-photo-452738.jpeg");
+    background: url("../img/front-left-side-47.png");
     background-position: -24rem -19rem;
     background-size: 150%;
     position: relative;
@@ -290,46 +297,58 @@
     font-size: 10vmin;
     padding: 1em 0.5em;
   }
+  .context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
 
 
-  footer {
-    background: rgba(0, 0, 0, 0.815);
-    overflow-x: hidden;
-    padding: 14vmin 18vmin;
-  }
-  
-  footer p > span {
-    color: #ff512f;
-  }
-  
-  footer input {
-    border: none !important;
-  }
-  
-  footer input::placeholder {
-    color: white !important;
-  }
-  
-  footer .input-group .input-group-text {
-    background: var(--bggradient);
-    border: none;
-  }
-  
-  footer .column i {
-    color: #dd2476;
-  }
-  
-  /* It is Adjacent sibling combinator */
-  
-  footer .column i + i {
-    padding: 0 0.5em;
-  }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
+  .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    background: rgba(0, 0, 0, 0.815);
-    z-index: 9999;
-    transition: all 1.5s ease;
-  }
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
+#footer-logo{
+  font-size: 40px;
+  font-family:Stalinist One ;
+}
