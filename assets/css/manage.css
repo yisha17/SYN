@@ -1,4 +1,9 @@
 .car-container{
     
-    margin:20px 40px;
+    margin:40px 40px;
+}
+
+footer{
+	position: absolute;
+	top:100vh;
 }

@@ -24,14 +24,16 @@ body{
 
 .booking-form {
 	position: relative;
+
 	top: 55px;
 	left: 150px;
 	max-width: 642px;
 	width: 100%;
-	margin: 50px;
+	margin: 90px;
 	padding: 40px;
 	
 	background-image: url('../img/front-left-side-47.png');
+
 	background-size: cover;
 	border-radius: 5px;
 	z-index: 20;
@@ -193,7 +195,10 @@ body{
 }
 
 footer{
+
 	position: relative;
 	top: 110vh;
 
 }
+
+
