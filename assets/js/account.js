@@ -28,6 +28,12 @@ login.addEventListener('click', () => {
 		}
 	});
 
+	db.user_table.each(data =>{
+		if (name.value === data.user_name && password.value === data.password){
+			window.location.href = `/customer.html?id=${data.id}`
+		}
+	})
+
 	
 })
 

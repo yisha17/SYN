@@ -22,27 +22,51 @@ const carType = document.querySelector('.car-type');
 const plateNumber = document.querySelector('.plate-number');
 const carPrice = document.querySelector('.car-price');
 const addCar = document.querySelector('.btn-adder');
+const urlParams = new URLSearchParams(window.location.search);
+const id = Number(urlParams.get('id'));
 
 
 addCar.onclick =(event) =>{
-    
-    if(validateForm() === true){
-        let flag = bulkcreate(db.car_table,{
+    if(id){
+        console.log("clicked");
+        console.log(id);
+
+        db.car_table.update(id,{
+                    
             car_name:carName.value,
-            car_image:window.result,
-            car_type:carType.value,
+            plate_number:plateNumber.value , 
             price:carPrice.value,
-            plate_number:plateNumber.value,
-            is_rented:false
-        })
-        console.log(carName.value)
-        console.log("created")
-        console.log(flag);
-        carName.value = chooseFile.value= carType.value = carPrice.value = plateNumber.value = "";
-        getData(db.car_table,(data)=>{
-            console.log(data);
+            car_type:carType.value
+        
+        }).then((updated)=>{
+            console.log("updated");
+        }).catch((error)=> {
+            console.log(error);
         });
+        
     }
+    else{
+
+        if(validateForm() === true){
+            let flag = bulkcreate(db.car_table,{
+                car_name:carName.value,
+                car_image:window.result,
+                car_type:carType.value,
+                price:carPrice.value,
+                plate_number:plateNumber.value,
+                is_rented:false
+            })
+            console.log(carName.value)
+            console.log("created")
+            console.log(flag);
+            carName.value = chooseFile.value= carType.value = carPrice.value = plateNumber.value = "";
+            getData(db.car_table,(data)=>{
+                console.log(data);
+            });
+        }
+    }
+    
+    
    
   
 }
@@ -75,8 +99,7 @@ chooseFile.addEventListener('change',function(){
 });
 
 document.addEventListener('DOMContentLoaded',()=>{
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = Number(urlParams.get('id'));
+   
     if (id){
         addCar.textContent = "Update Car"
         db.car_table.get(id)
@@ -85,21 +108,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             carPrice.value = data.price;
             carType.value = data.car_type;
             plateNumber.value = data.plate_number;
-            carImage.src = data.car_image;
+            carImage.setAttribute ('src',data.car_image);
         });
 
-        addCar.onclick =(e) =>{
-            if(addCar.textContent === "Update Car"){
-                console.log("clicked");
-                console.log(id);
-                db.car_table.update({id:id},{car_name:carName.value,plate_number:plateNumber.value,price:carPrice.value,car_type:carType.value})
-                .then(function(put){
-                console.log("updated");
-            });
-
-            }
-            
-        }
         console.log(window.result);
         
     }

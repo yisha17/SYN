@@ -86,7 +86,7 @@ const validateForm = () => {
     const choooseCar = document.getElementById('choose-car');
     const bookNow = document.getElementById('book-now');
     var datev = new Date();
-    const dayjs = require('dayjs');
+    
     var date = dayjs(datev).toISOString();
     
     var rdate = date.slice(0,10);
@@ -100,12 +100,12 @@ const validateForm = () => {
     }else if(userEmail.value.match(emailReg)){
         alert("incorrect Email")
         return false;
-    }else if(dayjs(pickDate).isBefore(dayjs(rdate))){
+    }else if(dayjs(pickDate.value).isBefore(dayjs(rdate))){
         alert("incorrect Date")
         return false;
-    }else if(dayjs(pickDate).isAfter(dayjs(dropDate))){
+    }else if(dayjs(pickDate.value).isAfter(dayjs(dropDate.value))){
 
-        alert("incorrect date")
+        alert("incorrect date drop up date")
         return false;
 
     }
