@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Cars</title>
-    <link rel="stylesheet" href="/Assets/css/cars.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <div class="container-fluid">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/cars.css">
+<title>Cars</title>
+</head>
+<body>
+  <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
 
       <div class="container-fluid bg-dark" id="top">
@@ -66,42 +72,91 @@
     </nav>
 
   </div>
+   
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <h1>Available Cars</h1>
+        </div>
+        <div class="col">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Choose Car Type
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a href="#" id="cart1" class="dropdown-item">SUV</a>
+              <a href="#" id="cart2" class="dropdown-item">VAN</a>
+              <a href="#" id="cart3"class="dropdown-item">PICKUP TRUCK</a>
+              <a href="#" id="cart4" class="dropdown-item">MINIVAN</a>
+              <a href="#" id="cart5" class="dropdown-item">SEDAN</a>
+              <a href="#" id="cart6" class="dropdown-item">COUPE</a>
+              <a href="#" id="cart7" class="dropdown-item">Mini Truck</a>
+              <a href="#" id="cart8" class="dropdown-item">Truck</a>
+              <a href="#" id="cart9" class="dropdown-item">Limousine</a>
 
-        <a class="navbar-brand" href="#">SYN Cars</a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="navlink" href="./index.html" id="home">Home</a>
-                <a class="navlink" href="./booking.html" id="book">Book here!</a>
-            </li>
-        </ul>    
-    </nav>
-</head>
-<body>
-    <ul>
-        <!--Here, we will deposit the cars we want NOTE: The cars need not be written as a list as cars here, but need to be continually updated through the .js-->
-    </ul>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js" ></script>
-    <script src="./assets/js/cars.js" type="module"></script>
-    
-</body>
-<footer class="bg-light text-center text-lg-start" id="footer">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      <div>
-        <a href="#">Follow as at</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <a href="https://twitter.com/?lang=en" target="_blank" id="tweet" >@twitter</a>
-          <a href="https://www.facebook.com/" target="_blank" id="face">@Facebook!</a>
-          <a href="https://www.instagram.com/" target="_blank" id="insta">@Instagram</a>
+      </div>
+      <div id = "available-cars" class="row available-cars">
+        
+        <!-- <div class="col-sm-3">
+          <div class="card card-block">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./assets/img/car2.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+            <div class="card-block">
+              <h4 class="card-title">Card title</h4>
+              
+              <a href="#" class="btn btn-primary">Button</a>
+            </div>
+            
         </div>
-      © 2021 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">SYN Rentals</a>
-      
+        
+      </div>
+      <div class="col-sm-3">
+        <div class="card card-block">
+          <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./assets/img/car2.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+          <div class="card-block">
+            <h4 class="card-title">Card title</h4>
+            
+            <a href="#" class="btn btn-primary">Button</a>
+          </div>
+      </div>  
     </div>
-    <!-- Copyright -->
-  </footer>
+    <div class="col-sm-3">
+      <div class="card card-block">
+        <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./assets/img/car2.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          
+          <a href="#" class="btn btn-primary">Button</a>
+        </div>
+    </div>  
+  </div>
+  <div class="col-sm-3">
+    <div class="card card-block">
+      <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./assets/img/car2.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block">
+        <h4 class="card-title">Card title</h4>
+        
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+  </div>  
+</div>
+<div class="col-sm-3 mt-4">
+  <div class="card card-block">
+    <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" src="./assets/img/car2.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      
+      <a href="#" class="btn btn-primary">Button</a>
+    </div>
+</div>   -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js" ></script>
+<script src="./assets/js/cars.js" type="module"></script>
+</body>
 </html>
