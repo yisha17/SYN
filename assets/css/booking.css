@@ -191,3 +191,9 @@ body{
 .booking-form .submit-btn:focus {
 	opacity: 0.9;
 }
+
+footer{
+	position: relative;
+	top: 110vh;
+
+}
